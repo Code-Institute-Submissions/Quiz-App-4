@@ -1,9 +1,12 @@
-*,*::before,*::after{
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
+
 /*css variables for colours https://www.w3schools.com/css/css3_variables.asp*/
-:root{
+:root {
     --hue-default: 200;
     --hue-wrong: 0;
     --hue-correct: 145;
@@ -11,14 +14,56 @@
 }
 
 
-body{
+body {
     --hue: var(--hue-default);
     padding: 0;
     margin: 0;
-    display:flex;
+    display: flex;
     width: 100vw;
-    height:100vh;
+    height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: hsl(var(--hue),100%,30%);
+    background-color: hsl(var(--hue), 100%, 30%);
+}
+
+body.correct {
+    --hue: var(--hue-correct)
+}
+
+body.wrong {
+    --hue: var(--hue-wrong)
+}
+
+/*Creating card style display with shadow*/
+.container {
+    width: 800px;
+    max-width: 80%;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 20px 5px;
+}
+
+/*Button Layout*/
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+/*Button Styling*/
+.btn {
+    --hue: var(--hue-default);
+    border: 1px solid hsl(var(--hue), 100%, 40%);
+    background-color: hsl(var(--hue), 100%, 60%);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color:antiquewhite;
+    outline:none;
+
+}
+
+.btn:hover{
+    border-color: black;
+    border-radius: 20px;
 }
