@@ -67,3 +67,18 @@ body.wrong {
     border-color: black;
     border-radius: 20px;
 }
+
+.btn.correct{
+    --hue: var(--hue-correct);
+    color:black
+}
+
+.btn.wrong{
+    --hue: var(--hue-wrong);
+}
+
+.start-btn, .next-btn{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
